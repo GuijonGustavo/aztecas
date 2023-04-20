@@ -1,0 +1,11 @@
+#!/bin/bash
+
+t=50;
+
+dat=1
+while [ $dat -lt $t ];
+do
+g=$(echo "scale=5; $dat/100" | bc | sed -r 's/^(-?)\./\10./')
+./pyt $g $g
+dat=$((dat+1))
+done

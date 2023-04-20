@@ -1,0 +1,26 @@
+#!/bin/bash
+gnuplot<<EOF
+unset key
+set terminal jpeg large size 720, 600
+set output "N$2.jpg"
+set xrange [0:1]
+set yrange [0:$3]
+set ylabel "numero de particulas"
+plot "DATA_$1_1D.dat" using 1:2 with lines
+
+set output "V$2.jpg"
+set xrange [0:1]
+set yrange [0:$4]
+set ylabel "velocidad"
+plot "DATA_$1_1D.dat" using 1:3 with lines 
+
+set output "P$2.jpg"
+set xrange [0:1]
+set yrange [0:$5]
+set ylabel "presion"
+plot "DATA_$1_1D.dat" using 1:4 with lines 
+
+set terminal x11
+set size 1, 1
+EOF
+

@@ -1,0 +1,6 @@
+/*Fluxes along first dimension*/
+f1 : n*u/sqrt(1 - u^2 - v^2 - w^2);
+f2 : u*(e + p)/(1 - u^2 - v^2 - w^2);
+f3 : ((e + p)*u^2)/(1 - u^2 - v^2 - w^2) + p;
+f4 : ((e + p)*u*v)/(1 - u^2 - v^2 - w^2);
+f5 : ((e + p)*u*w)/(1 - u^2 - v^2 - w^2);

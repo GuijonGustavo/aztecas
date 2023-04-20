@@ -1,0 +1,13 @@
+#!/bin/bash
+maxima<<EOF
+
+/*Parameters*/
+
+	batch("Sources");
+  
+	/*Output the file VECTOR_S*/
+	S: matrix([s1],[s2],[s3],[s4],[s5])$
+	stringout("VECTOR_S",ratsimp(S[1,1]),ratsimp(S[2,1]),ratsimp(S[3,1]),
+	ratsimp(S[4,1]),ratsimp(S[5,1]))$
+
+EOF

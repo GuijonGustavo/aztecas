@@ -1,0 +1,25 @@
+#!/bin/bash
+i=0;
+input=[];
+echo "valores para establecido para graficar";
+while read line
+do
+input[$i]=$line;
+i=$(($i+1));
+done < "GRAFICAS"
+n=${input[1]};
+echo "n: $n";
+v=${input[2]};
+echo "v: $v";
+p=${input[3]};
+echo "p: $p";
+t=${input[4]};
+echo "numero de archivos de datos: $t";
+
+dat=1
+while [ $dat -lt $t ];
+do
+g=$(echo "scale=5; $dat/1000.0"| bc)
+./grafica2d $dat $g $n $v $p
+dat=$((dat+1))
+done

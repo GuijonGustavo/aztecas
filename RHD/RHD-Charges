@@ -1,0 +1,6 @@
+/*Conservate charges*/
+q1 : n/sqrt(1 - u^2 - v^2 - w^2);
+q2 : (e + p)/(1 - u^2 - v^2 - w^2) - p;
+q3 : u*(e + p)/(1 - u^2 - v^2 - w^2);
+q4 : v*(e + p)/(1 - u^2 - v^2 - w^2);
+q5 : w*(e + p)/(1 - u^2 - v^2 - w^2);
